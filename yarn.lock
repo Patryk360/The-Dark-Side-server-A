@@ -71,6 +71,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"bluebird@npm:>= 2.3.2 < 3":
+  version: 2.11.0
+  resolution: "bluebird@npm:2.11.0"
+  checksum: 10c0/d0c55c4c5f56522ee53e1762908c73ad97e403ce24d80ae99af3bf8902764530df0f7c88f35a1de809aa4b62d474c17f6bd83c8bc4f8cb539c50fddec1896c20
+  languageName: node
+  linkType: hard
+
 "body-parser@npm:^2.2.1":
   version: 2.2.2
   resolution: "body-parser@npm:2.2.2"
@@ -591,6 +598,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"rethinkdb@npm:^2.4.2":
+  version: 2.4.2
+  resolution: "rethinkdb@npm:2.4.2"
+  dependencies:
+    bluebird: "npm:>= 2.3.2 < 3"
+  checksum: 10c0/cab2b6f8d8df1192bedcc765f58d0cf0b8681313e09ee0f6a17cbed6edd463808edbbfee3d394a092d9e31014189e07c2cd842a3197b08e7dc532ff228cfaee1
+  languageName: node
+  linkType: hard
+
 "router@npm:^2.2.0":
   version: 2.2.0
   resolution: "router@npm:2.2.0"
@@ -744,6 +760,7 @@ __metadata:
   resolution: "the-dark-side-server-a@workspace:."
   dependencies:
     express: "npm:^5.2.1"
+    rethinkdb: "npm:^2.4.2"
     socket.io: "npm:^4.8.3"
   languageName: unknown
   linkType: soft

@@ -12,23 +12,40 @@ const path = require('path');
 app.use(express.static(path.join(__dirname, 'public')));
 
 let players = {};
+// --- NOWOŚĆ: PAMIĘĆ ŚWIATA ---
+// Przechowujemy tylko zmiany (gdzie gracz coś postawił/zniszczył)
+// Format klucza: "x,y", Wartość: type
+let worldChanges = {}; 
 
 io.on('connection', (socket) => {
-    console.log('Nowy gracz połączony:', socket.id);
+    console.log('Nowy gracz:', socket.id);
 
     players[socket.id] = {
-        x: 0,
-        y: -500,
-        color: '#' + Math.floor(Math.random()*16777215).toString(16),
-        width: 20,
-        height: 40
+        x: 0, y: -500, width: 20, height: 40,
+        color: '#' + Math.floor(Math.random()*16777215).toString(16)
     };
 
+    // 1. Wyślij graczowi listę obecnych graczy
     socket.emit('currentPlayers', players);
 
-    socket.broadcast.emit('newPlayer', { 
-        id: socket.id, 
-        player: players[socket.id] 
+    // 2. --- NOWOŚĆ: Wyślij graczowi historię zmian w świecie ---
+    socket.emit('worldHistory', worldChanges);
+
+    // 3. Poinformuj innych o nowym graczu
+    socket.broadcast.emit('newPlayer', { id: socket.id, player: players[socket.id] });
+
+    socket.on('chatMessage', (msg) => {
+        // Zabezpieczenie przed pustymi wiadomościami
+        if (!msg || msg.trim() === "") return;
+
+        // Skracamy zbyt długie wiadomości
+        const cleanMsg = msg.substring(0, 100);
+
+        // Wysyłamy do wszystkich: { id: kto, text: treść }
+        io.emit('chatMessage', { 
+            id: socket.id, 
+            text: cleanMsg 
+        });
     });
 
     socket.on('playerMovement', (movementData) => {
@@ -43,12 +60,17 @@ io.on('connection', (socket) => {
         }
     });
 
+    // 4. --- NOWOŚĆ: Zapisywanie zmian ---
     socket.on('blockUpdate', (data) => {
+        // data = { x, y, type }
+        const key = `${data.x},${data.y}`;
+        worldChanges[key] = data.type; // Zapisz w pamięci serwera
+        
+        // Wyślij do innych
         socket.broadcast.emit('blockUpdate', data);
     });
 
     socket.on('disconnect', () => {
-        console.log('Gracz wyszedł:', socket.id);
         delete players[socket.id];
         io.emit('playerDisconnected', socket.id);
     });
