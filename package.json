@@ -1,0 +1,27 @@
+{
+  "name": "the-dark-side-server-a",
+  "version": "0.0.1",
+  "description": "Server",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Patryk360/The-Dark-Side-server-A.git"
+  },
+  "keywords": [
+    "Server"
+  ],
+  "author": "Patryk360",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Patryk360/The-Dark-Side-server-A/issues"
+  },
+  "homepage": "https://github.com/Patryk360/The-Dark-Side-server-A#readme",
+  "packageManager": "yarn@4.12.0",
+  "dependencies": {
+    "express": "^5.2.1",
+    "socket.io": "^4.8.3"
+  }
+}
