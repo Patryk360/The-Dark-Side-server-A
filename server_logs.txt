@@ -306,3 +306,35 @@
 [16.02.2026 14:31:26] [DISCONNECT] Gracz rozłączony: bcYXUOMwFgMBnD0wAAAT (aaaaaaaaa)
 [16.02.2026 14:31:28] [CONNECT] Gracz połączony: HsC0AWdL8OUlI2xMAAAV
 [16.02.2026 14:31:28] [NICK] Gracz HsC0AWdL8OUlI2xMAAAV ustawił nick: aaa
+[16.02.2026 15:39:03] [SYSTEM] Serwer startuje na porcie 3000
+[16.02.2026 15:39:05] [CONNECT] Gracz połączony: 40s4532yvM3FqFjOAAAB
+[16.02.2026 15:39:05] [NICK] Gracz 40s4532yvM3FqFjOAAAB ustawił nick: aa
+[16.02.2026 15:39:06] [DISCONNECT] Gracz rozłączony: 40s4532yvM3FqFjOAAAB (aa)
+[16.02.2026 15:39:08] [CONNECT] Gracz połączony: ca1--sjDpTnBk123AAAD
+[16.02.2026 15:39:08] [NICK] Gracz ca1--sjDpTnBk123AAAD ustawił nick: aaa
+[16.02.2026 15:39:17] [KILL] aaa zabił krowę ID 6
+[16.02.2026 15:39:18] [KILL] aaa zabił krowę ID 10
+[16.02.2026 15:39:19] [KILL] aaa zabił krowę ID 7
+[16.02.2026 15:39:20] [KILL] aaa zabił krowę ID 3
+[16.02.2026 15:39:21] [KILL] aaa zabił krowę ID 8
+[16.02.2026 15:39:22] [KILL] aaa zabił krowę ID 0
+[16.02.2026 15:39:24] [KILL] aaa zabił krowę ID 14
+[16.02.2026 15:39:26] [KILL] aaa zabił krowę ID 11
+[16.02.2026 15:39:26] [KILL] aaa zabił krowę ID 16
+[16.02.2026 15:39:50] [BUILD] aaa POSTAWIŁ (2) w [21, 51]
+[16.02.2026 15:39:51] [BUILD] aaa ZNISZCZYŁ w [21, 51]
+[16.02.2026 15:39:54] [BUILD] aaa ZNISZCZYŁ w [18, 51]
+[16.02.2026 15:39:56] [BUILD] aaa ZNISZCZYŁ w [18, 51]
+[16.02.2026 15:39:57] [BUILD] aaa POSTAWIŁ (12) w [18, 51]
+[16.02.2026 15:39:57] [BUILD] aaa POSTAWIŁ (12) w [19, 51]
+[16.02.2026 15:39:58] [BUILD] aaa POSTAWIŁ (12) w [20, 51]
+[16.02.2026 15:39:58] [BUILD] aaa POSTAWIŁ (12) w [21, 51]
+[16.02.2026 15:39:59] [BUILD] aaa POSTAWIŁ (12) w [22, 51]
+[16.02.2026 15:40:25] [BUILD] aaa ZNISZCZYŁ w [-3, 31]
+[16.02.2026 15:40:26] [BUILD] aaa ZNISZCZYŁ w [-3, 30]
+[16.02.2026 15:40:26] [BUILD] aaa ZNISZCZYŁ w [-5, 30]
+[16.02.2026 15:40:26] [BUILD] aaa ZNISZCZYŁ w [-4, 30]
+[16.02.2026 15:40:27] [BUILD] aaa ZNISZCZYŁ w [-4, 31]
+[16.02.2026 15:40:27] [BUILD] aaa ZNISZCZYŁ w [-5, 31]
+[16.02.2026 15:40:28] [BUILD] aaa ZNISZCZYŁ w [-6, 30]
+[16.02.2026 15:40:32] [DISCONNECT] Gracz rozłączony: ca1--sjDpTnBk123AAAD (aaa)
