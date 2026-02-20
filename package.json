@@ -1,6 +1,6 @@
 {
   "name": "the-dark-side-server-a",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Server",
   "main": "server.js",
   "scripts": {
@@ -23,6 +23,7 @@
   "dependencies": {
     "express": "^5.2.1",
     "rethinkdb": "^2.4.2",
-    "socket.io": "^4.8.3"
+    "socket.io": "^4.8.3",
+    "sqlite3": "^5.1.7"
   }
 }
